@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almdrasa</title>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  position: relative;
+}
+.container {
+  padding: 15px 50px;
+}
+@media (max-width:768px) {
+  .container{
+    padding: 5px 5px;
+  }
+}
+.logo{
+  color:white;
+}
+@media (max-width:768px) {
+  .logo{
+    font-size: 20px;
+  }
+}
+header{
+  background-color: #109BA0;
+  color: white;
+  margin-bottom: 60px;
+  border-radius: 5px;
+}
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+}
+.header-nav a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+@media (max-width:768px) {
+  .header-nav a{
+    font-size: 13px;
+  }
+}
+.header-nav a:hover{
+  color: blanchedalmond;
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+.post-header{
+  margin-bottom: 40px;
+}
+h2::after{
+  content: "Trending 🔥";
+  background-color: #109BA0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+strong.name{
+  color: #109BA0;
+}
+.author-img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#author {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+@media (max-width:768px) {
+  #author{
+    font-size: 1rem;
+  }
+}
+.post-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width:768px) {
+  .post-img{
+    width: 400;
+    height: auto;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+@media (max-width:768px) {
+  h2{
+    font-size: 1.7rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+@media (max-width:768px) {
+  h3{
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width:768px) {
+  h4{
+    font-size: 1.2rem;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+@media (max-width:768px) {
+  p{
+    font-size: 0.9rem;
+  }
+}
+li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+@media (max-width:768px) {
+  li{
+    font-size: 1rem;
+  }
+}
+li strong{
+  font-size: 19px;
+}
+p.size{
+  font-weight: bold;
+}
+p.size a{
+  color: #109BA0;
+  font-weight: bold;
+  text-decoration: none;  
+}
+p.size a:hover{
+  color: sienna;
+  transform: scale(1.2);
+  text-decoration: underline;  
+}
+
+.related {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  list-style: none;
+  background-color: #199;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.related a{
+  color: whitesmoke;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+.related a:hover{
+  color:white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.related-author {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+}
+footer{
+  height: 50px;
+  background-color: #199;
+  border-radius: 7px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.head-footer{
+  color: white;
+  font-size: 30px;
+}
+@media (max-width:768px) {
+  .head-footer{
+    font-size: 20px;
+  }
+}
+.header-footer{
+  font-size: 1rem;
+  font-weight: 400;
+}
+@media (max-width:768px) {
+  .header-footer{
+    font-size: 13px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+      <h1 class="logo">Almdrasa</h1>
+      <nav class="header-nav">
+        <a href="#">Courses</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact US</a>
+      </nav>
+    </header>
+
+
+    <article>
+      <div class="post-header">
+        <h2>The Learning Platform that you were waiting for</h2>
+
+        <img class="author-img" src="mohamed-abusrea.jpg" alt="picture of Elsaeed Ahmed" height="50" width="50" />
+
+        <p id="author">
+          Posted by <strong class="name">Elsaeed Ahmed</strong> on Saturday, Aug 2nd 2025
+        </p>
+
+        <img class="post-img" src="post-img.jpg" alt="picture of Almdrasa" width="500" height="200" />
+       </div>
+
+       <p>
+        <em>Almdrasa</em> is a new learning platform that tries to fill the gab in the Arabic content.
+        The idea is to find the best programming courses in the field and try to reproduce it in Arabic with high
+        standards (Audio, Video, Animations, etc).
+       </p>
+
+       <p>
+        Let's learn more about Almdrasa platform.
+       </p>
+
+       <h3>What makes Almdrasa the right choice for you?</h3>
+
+       <p>Here are 5 reasons that might convince you:</p>
+
+       <ol>
+        <li>
+          <strong>W</strong>e pick the courses carefully that has the best reviews, good curriculum and up-to-date to
+          reproduce it in Arabic
+        </li>
+        <li>
+          <strong>W</strong>e raised the bar and committed to create high quality courses in all aspects (Audio, Video,
+          Visualizations, Humor, etc...)
+        </li>
+        <li>
+          <strong>N</strong>o need to pay for each course. a low price yearly subscription will give you access to all
+          courses
+        </li>
+        <li>
+          <strong>C</strong>ommunicate with the instructors easily
+        </li>
+        <li>
+          <strong>G</strong>et badges after completion of every course to won prizes
+        </li>
+       </ol>
+
+       <p class="size"> 
+        You can learn more at
+        <a href="https://www.almdrasa.com" target="_blank">Almdrasa website</a>.
+       </p>
+
+       <h3>What courses do we offer?</h3>
+
+       <p>
+        Currently, we have those courses and plan to create even more:
+       </p>
+
+       <ul>
+        <li>HTML Fundementals</li>
+        <li>CSS Fundementals</li>
+        <li>HTML & CSS Project</li>
+        <li>Programming Fundementals</li>
+        <li>Javascript Fundementals</li>
+       </ul>
+
+
+       <p>
+        We also plan to have a full roadmaps for different paths like:
+       </p>
+
+       <ul>
+        <li>Frontend roadmap</li>
+        <li>Backend roadmap</li>
+        <li>Fullstack roadmap</li>
+       </ul>
+
+
+
+       <p>That's it for now. See you in the next one 👋!</p>
+    </article>
+
+    <aside>
+      <ul class="related">
+        <li>
+          <img src="related-1.jpg" alt="CSS logo" width="75" width="75" />
+          <a href="#">Get Styling with CSS</a>
+          <p class="related-author">By mohamed abusrea</p>
+        </li>
+        <li>
+          <img src="related-2.jpg" alt="javascript logo" width="75" heigth="75" />
+          <a href="#">Getting started with javascript</a>
+          <p class="related-author">By Ahmed Fathy</p>
+        </li>
+      </ul>
+    </aside>
+
+    <footer>
+      <h5 class="head-footer">Almdrasa</h5>
+      <h6 class="header-footer">Copyright &copy; 2025 by Elsaeed.</h6>
+    </footer>
+
+  </div>
+</body>
+</html>
